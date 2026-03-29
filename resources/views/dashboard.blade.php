@@ -38,6 +38,7 @@
                 </div>
             </div>
             <div class="col-6">
+                @include('shared.sucess-message')
                 @include('shared.submit_idea')
                 <hr>
                 @foreach ($ideas as $Idea)
@@ -45,6 +46,9 @@
                         @include('shared.idea-card')
                     </div>
                 @endforeach
+                <div class="mt-5">
+                    {{ $ideas->links()}}
+                </div>
             </div>
             <div class="col-3">
 
@@ -54,7 +58,8 @@
                     </div>
                     <div class="card-body">
                         <input placeholder="...
-                                                                    " class="form-control w-100" type="text" id="search">
+                                                                                " class="form-control w-100" type="text"
+                            id="search">
                         <button class="btn btn-dark mt-2"> Search</button>
                     </div>
                 </div>
