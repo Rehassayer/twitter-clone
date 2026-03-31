@@ -49,7 +49,7 @@ class IdeaController extends Controller
     'content'=> 'required|min:5|max:250'
     ]);
   
-       $idea->update($validate);
+       $idea->update($validate); 
 
        return redirect()->route('ideas.show',$idea->id)->with('sucess',"Idea UPdated Successfully");
     }
